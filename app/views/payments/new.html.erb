@@ -24,17 +24,22 @@
                   <input class="form-control input-lg" type="text" placeholder="20.00" name="amount">
                 </div>
               </div>
-              <input type="hidden" name="customer" value="<%= @customer.id %>">
-              <input type="hidden" name="bank_account" value="<%= @bank_account.id %>">
-              <button class="btn btn-lg btn-custom btn-primary btn-block submit">
-                Make a payment
-              </button>
+              <div class="topspace-md text-muted text-left">
+                <small>
+                  By providing your bank information and using this service, you authorize ACH Example App to electronically debit your <strong><%= @bank_account.bank_name %></strong> account ending in <strong><%= @bank_account.last4 %></strong> and, if necessary, electronically credit your account to correct erroneous debits.
+                </small>
+              </div>
+              <hr>
+              <div class="topspace">
+                <input type="hidden" name="customer" value="<%= @customer.id %>">
+                <input type="hidden" name="bank_account" value="<%= @bank_account.id %>">
+                <button class="btn btn-lg btn-custom btn-primary btn-block submit">
+                  Make a payment
+                </button>
+              </div>
             </form>
           </div>
         </div>
-        <p class="text-muted topspace">
-          This will charge your <strong><%= @bank_account.bank_name %></strong> account ending in <strong><%= @bank_account.last4 %></strong>
-        </p>
     </div>
   </div>
 </div>
