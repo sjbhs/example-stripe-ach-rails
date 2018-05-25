@@ -1,6 +1,6 @@
 # A Stripe ACH example app
 
-An example app illustrating accepting ACH donations with [Stripe](https://stripe.com). Find more about this in [Stripe's ACH documentation](https://stripe.com/docs/ach).
+An example app illustrating accepting ACH payments with [Stripe](https://stripe.com). Find more about this in [Stripe's ACH documentation](https://stripe.com/docs/ach).
 
 ## Demo
 You can find a demo of this application running at [https://stripe-ach-example-app.herokuapp.com/](https://stripe-ach-example-app.herokuapp.com/).

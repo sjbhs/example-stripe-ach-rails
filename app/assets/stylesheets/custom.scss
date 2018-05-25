@@ -140,6 +140,19 @@ h1 {
   border-width: 2px;
   box-shadow: none;
 }
+.card {
+  background-color: #fff;
+  border-radius: 4px;
+  padding-bottom: 5px;
+  color: #666;
+  h4 {
+    color: #000;
+    padding: 15px 0px 0px 15px;
+  }
+  thead {
+    color: #000;
+  }
+}
 /* ===========
    Buttons
  =============*/
