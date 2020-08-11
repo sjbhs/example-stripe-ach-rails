@@ -56,8 +56,4 @@ class PaymentsController < ApplicationController
       redirect_to root_path
     end
   end
-
-  def show
-
-  end
 end
