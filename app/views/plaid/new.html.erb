@@ -3,28 +3,15 @@
   <div class="row">
     <div class="col-md-6 col-md-offset-3 topspace-lg text-center">
       <h1>
-        Stripe ACH Demo
+        Learn For Life Foundation ACH Transfer
       </h1>
       <h4 class="text-muted">
-        Create test ACH payments
+        Create ACH payments
       </h4>
-      <div class="topspace-lg">
-        <%= render 'layouts/messages' %>
-        <button class="btn btn-custom btn-lg btn-primary btn-block" id='link-button'>
-          Connect with Plaid
-        </button>
-      </div>
       <div class="topspace">
         <%= link_to "Enter bank details", new_banks_path, class: "btn btn-custom btn-lg btn-default btn-block" %>
       </div>
       <div class="topspace" id="error-message">
-      </div>
-      <div class="topspace-lg lato">
-        <hr>
-        <h4 class="text-muted"><i class="fa fa-lock"></i> Plaid test credentials</h4>
-        <strong>username:</strong> user_good
-        <br>
-        <strong>password:</strong> pass_good
       </div>
       <form id="ach-form" method="post" action="/plaid">
         <%= hidden_field_tag :authenticity_token, form_authenticity_token %>

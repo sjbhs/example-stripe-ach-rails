@@ -21,12 +21,12 @@
                 <label>Payment amount</label>
                 <div class="input-group">
                   <span class="input-group-addon">$</span>
-                  <input class="form-control input-lg" type="text" placeholder="20.00" name="amount">
+                  <input class="form-control input-lg" type="text" placeholder="0.00" name="amount">
                 </div>
               </div>
               <div class="topspace-md text-muted text-left">
                 <small>
-                  By providing your bank information and using this service, you authorize ACH Example App to electronically debit your <strong><%= @bank_account.bank_name %></strong> account ending in <strong><%= @bank_account.last4 %></strong> and, if necessary, electronically credit your account to correct erroneous debits.
+                  By providing your bank information and using this service, you authorize ACH App to electronically debit your <strong><%= @bank_account.bank_name %></strong> account ending in <strong><%= @bank_account.last4 %></strong> and, if necessary, electronically credit your account to correct erroneous debits.
                 </small>
               </div>
               <hr>
