@@ -3,7 +3,7 @@ class PaymentsController < ApplicationController
     # For the purpose of this demo, we're just storing a customer ID in a session.
     # In a production application, you'll want to store the customer in your database
     if session[:customer] && session[:bank_account]
-      @customer = Stripe::Customer.retrieve(session[:customer])
+      @customer = Stripe::Customer.retrieve({id: session[:customer], expand: ['sources'],})
       @bank_account = @customer.sources.retrieve(session[:bank_account])
     else
       flash[:alert] = 'Please add a bank account to make an ACH payment.'

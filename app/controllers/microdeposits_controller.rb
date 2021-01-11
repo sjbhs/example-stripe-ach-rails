@@ -25,7 +25,7 @@ class MicrodepositsController < ApplicationController
 
         # Verify the amounts
         begin
-          customer = Stripe::Customer.retrieve(customer)
+          customer = Stripe::Customer.retrieve({id: customer, expand: ['sources'],})
           bank_account = customer.sources.retrieve(bank_account)
           bank_account.verify(amounts: [amount1, amount2])
 

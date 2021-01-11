@@ -27,6 +27,7 @@ class BanksController < ApplicationController
 
         # Create a session for the customer and bank account ID
         session[:customer] = customer.id
+        customer = Stripe::Customer.retrieve({id: customer.id, expand: ['sources'],})
         session[:bank_account] = customer.sources.data.first.id
 
         # Redirect to verify microdeposit amounts
